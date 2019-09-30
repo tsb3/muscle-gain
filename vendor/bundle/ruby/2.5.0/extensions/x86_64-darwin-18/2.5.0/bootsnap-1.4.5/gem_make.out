@@ -1,0 +1,15 @@
+current directory: /Users/tsubasa/workspace/muscle-gain/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.4.5/ext/bootsnap
+/Users/tsubasa/.rvm/rubies/ruby-2.5.1/bin/ruby -I /Users/tsubasa/.rvm/rubies/ruby-2.5.1/lib/ruby/site_ruby/2.5.0 -r ./siteconf20190930-88087-13i3kw7.rb extconf.rb
+creating Makefile
+
+current directory: /Users/tsubasa/workspace/muscle-gain/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.4.5/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/tsubasa/workspace/muscle-gain/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.4.5/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/tsubasa/workspace/muscle-gain/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.4.5/ext/bootsnap
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20190930-88087-1phmp36/bootsnap
