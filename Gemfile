@@ -35,6 +35,7 @@ end
 group :production do
   gem 'pg'
   gem "jquery-rails"
+  gem 'rails_12factor'
 end
 
 group :development do
