@@ -14,7 +14,7 @@ before_action :set_article, only: [:edit, :update, :show, :destroy]
   def create
     @article = Article.new(article_params)
     if @article.save
-      flash[:notice] = "記事が作成されました"
+      flash[:notice] = "Article was successfully created"
       redirect_to article_path(@article)
     else
       render 'new'
