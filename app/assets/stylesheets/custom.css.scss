@@ -3,6 +3,7 @@ $navbar-default-bg: white;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* home.html.erb */
 #logo {
   display: inline-block;
   padding: 0.7em 0.2em;
@@ -45,6 +46,7 @@ $navbar-default-bg: white;
   background-image: #b0c9ff;
 }
 
+/* _footer.html.erb */
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -70,3 +72,12 @@ footer ul li {
   margin-left: 15px;
 }
 
+/* show.html.erb */
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+  
+.description {
+  margin-top: 0;
+}
