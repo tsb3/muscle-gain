@@ -11,8 +11,9 @@ gem 'mysql2', '>= 0.4.4'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.4.1'
-gem "jquery-rails"
+gem 'jquery-rails'
 gem 'sass-rails', '~> 5'
+gem 'jquery-ui-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -24,6 +25,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'kaminari', '~> 0.17.0'
 gem 'kaminari-bootstrap', '~> 3.0.1'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

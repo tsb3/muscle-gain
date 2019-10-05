@@ -14,8 +14,12 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-//= require jquery_ujs
+//= require rails-ujs
 //= require jquery
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $('.dropdown-toggle').dropdown();
+});
