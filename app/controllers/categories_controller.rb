@@ -20,7 +20,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
-
+    @category = Category.find(params[:id])
+    @category_articles = @category.articles.page(params[:page]).per(5)
   end
   
   private

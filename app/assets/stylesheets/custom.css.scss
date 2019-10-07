@@ -82,6 +82,19 @@ footer ul li {
   margin-top: 0;
 }
 
+/* _category.html.erb */
+.badge {
+  background-color: #cef6f5;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+/* _form.html.erb */
+.input_checkbox input {
+  width: auto !important;
+}
+
 /* index.html.erb */
 .article-title {
   font-weight: bold;
