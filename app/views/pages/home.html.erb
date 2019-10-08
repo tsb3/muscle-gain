@@ -1,4 +1,33 @@
 <div class="center jumbotron">
   <h1>Find your online trainer</h1>
-  <%= link_to "Sign up now", signup_path, class: "btn btn-primary btn-lg btn-xlarge" %>
+  <%= link_to "Sign up now", signup_path, class: "btn btn-success btn-lg btn-xlarge" %>
 </div>
+<div class="features">
+	<div class="container">
+		<div class="section-title text-center">
+			<h1 class="title">Superfitとは</h1>
+			<h4 class="title">自分に合ったオンラインパーソナルトレーナーを見つけることができるトレーナーとトレーニーのマッチングサービスです。</h4>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-6 feature text-center">
+        <%= link_to image_tag('book.svg') %>
+				<h3 class="feature-title">トレーニングを知る</h3>
+				<p>筋トレや食事に関する様々な記事からトレーニングの知識を身に付けられます。</p>
+			</div>
+			<div class="col-md-4 col-sm-6 feature text-center">
+        <%= link_to image_tag('loupe.svg') %>
+				<h3 class="feature-title">トレーナーを探す</h3>
+				<p>トレーナーが書いた記事を見ることで、自分にあったトレーナーを探すことができます。</p>
+			</div>
+			<div class="col-md-4 col-sm-6 feature text-center">
+        <%= link_to image_tag('motivation.svg') %>
+				<h3 class="feature-title">モチベーションを得る</h3>
+				<p>トレーナーと食事や運動のアドバイスをもらうことで、モチベーションを維持することができます。ダイエットがなかなか続かない方におすすめです。</p>
+			</div>
+		</div>
+	</div>
+    <div class="center">
+      <%= link_to "Sign up now", signup_path, class: "btn btn-success btn-lg btn-xlarge" %>
+    </div>
+</div>
+
