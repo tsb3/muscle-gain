@@ -1,6 +1,17 @@
-<h1 align="center">All Trainer</h1>
+<h1 align="center">すべてのトレーナー</h1>
 <div align="center">
-  <%= paginate @users %>
+  <%= search_form_for @q do |f| %>
+    <div class="input-group">
+        <%= f.search_field :username_cont, class: 'form-control', placeholder: "トレーナーを検索", size: 20 %>
+        <span class="input-group-btn">
+          <%= f.submit '検索', class: "btn btn-success btn-md" %>
+        </span>
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+  <% end %>
+  <div align="center">
+    <%= paginate @users %>
+  </div>
   <% @users.each do |user| %>
     <ul class="listing">
       <div class="row">
@@ -18,5 +29,7 @@
       </div>
     </ul>
   <% end %>
-  <%= paginate @users %>
+  <div align="center">
+    <%= paginate @users %>
+  </div>
 </div>

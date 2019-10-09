@@ -1,8 +1,19 @@
 <h1 align="center">記事一覧</h1>
 <div align="center">
-  <%= paginate @articles %>
-</div>
-<%= render 'article', obj: @articles %>
-<div align="center">
-  <%= paginate @articles %>
+  <%= search_form_for @q do |f| %>
+    <div class="input-group">
+        <%= f.search_field :title_cont, class: 'form-control', placeholder: "記事を検索", size: 20 %>
+        <span class="input-group-btn">
+          <%= f.submit '検索', class: "btn btn-success btn-md" %>
+        </span>
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+  <% end %>
+  <div align="center">
+    <%= paginate @articles %>
+  </div>
+  <%= render 'article', obj: @articles %>
+  <div align="center">
+    <%= paginate @articles %>
+  </div>
 </div>

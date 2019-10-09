@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   before_action :require_admin, only: [:destroy]
 
   def index
-    @users = User.page(params[:page]).per(5)
+    @q = User.ransack(params[:q])
+    @users = @q.result(distinct: true).page(params[:page]).per(5)
   end
   
   def new
