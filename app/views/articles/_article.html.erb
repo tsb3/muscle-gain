@@ -2,6 +2,9 @@
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
       <div class="well well-lg">
+        <% if article.categories.any? %>
+          <p><%= render article.categories %></p>
+        <% end %>
         <div class="article-title">
           <%= link_to article.title, article_path(article) %>
         </div>
@@ -13,15 +16,12 @@
                     last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
           </div>
         </div>
-        <% if article.categories.any? %>
-          <p>Categories: <%= render article.categories %></p>
-        <% end %>
         <% if logged_in? && (current_user == article.user || current_user.admin?) %>
           <div class="article-actions">
-            <%= link_to "Edit this article", edit_article_path(article), class: "btn btn-xs btn-primary" %>
-            <%= link_to "Delete this article", article_path(article), method: :delete, 
-                                          data: { confirm: "Are you sure you want to delete the article?"}, 
-                                          class: "btn btn-xs btn-danger" %>  
+            <%= link_to "記事を編集する", edit_article_path(article), class: "btn btn-xs btn-primary" %>
+            <%= link_to "記事を削除する", article_path(article), method: :delete, 
+                                          data: { confirm: "本当に記事を削除しますか?"}, 
+                                          class: "btn btn-xs btn-danger" %>
           </div>
         <% end %>
       </div>

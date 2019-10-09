@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:success] = "Welcome to the Muscle Gain #{@user.username}"
+      flash[:success] = "Superfitへ、ようこそ! #{@user.username}"
       redirect_to user_path(@user)
     else
       render 'new'
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      flash[:success] = "Your account was updated successfully"
+      flash[:success] = "アカウントが更新されました"
       redirect_to articles_path
     else
       render 'edit'
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    flash[:danger] = "User and all articles created by user have been deleted"
+    flash[:danger] = "ユーザーとそのユーザーが作成したすべての記事が削除されました"
     redirect_to users_path
   end
 
@@ -57,14 +57,14 @@ class UsersController < ApplicationController
 
   def require_same_user
     if current_user != @user and !current_user.admin?
-      flash[:danger] = "You can only edit you own account"
+      flash[:danger] = "自分のアカウントのみ編集できます"
       redirect_to root_path
     end
   end
 
   def require_admin
     if logged_in? and !current_user.admin?
-      flash[:danger] = "Only admin users can perform that action"
+      flash[:danger] = "管理者のみが行える操作です"
       redirect_to root_path
     end
   end

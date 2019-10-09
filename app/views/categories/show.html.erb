@@ -1,8 +1,8 @@
-<h1 align="center"><%= "Category: " + @category.name %></h1>
+<h1 align="center"><%= @category.name %></h1>
 <div align="center">
 <% if logged_in? and current_user.admin? %>
   <div class="row">
-    <span class="badge"><%= link_to "Edit Category Name", edit_category_path(@category) %></span>
+    <span class="badge"><%= link_to "カテゴリ名を編集する", edit_category_path(@category) %></span>
   </div>
 <% end %>
   <%= paginate @category_articles %>
