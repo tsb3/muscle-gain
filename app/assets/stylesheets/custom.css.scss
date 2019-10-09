@@ -67,6 +67,16 @@ footer ul li {
 }
 
 /* show.html.erb */
+.user {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+.body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 10px;
+  margin-top: 5px;
+}
+
 .article-actions {
   border-top: 1px solid #eaeaea;
   padding-top: 5px;
@@ -78,7 +88,7 @@ footer ul li {
 
 /* _category.html.erb */
 .badge {
-  background-color: #cef6f5;
+  background-color: transparent;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
