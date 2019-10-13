@@ -14,7 +14,6 @@
   <div class="media-body">
     <div class="media-heading">
       <%= link_to @article.user.username, user_path(@article.user) %><br>
-      this will be PR of user.
     </div>
   </div>
   <div class="body">
@@ -29,5 +28,5 @@
                                         data: { confirm: "本当に記事を削除しますか?"},
                                         class: "btn btn-xs btn-danger" %>
   <% end %>
-  <%= link_to "View all articles", articles_path, class: "btn btn-xs btn-success" %>
+  <%= link_to "全ての記事を見る", articles_path, class: "btn btn-xs btn-success" %>
 </div>
