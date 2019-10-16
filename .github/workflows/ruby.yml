@@ -1,4 +1,4 @@
-name: CI
+name: CI_for_muscle-gain
 on: [push]
 
 jobs:
