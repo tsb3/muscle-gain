@@ -297,7 +297,7 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   spring-watcher-listen (~> 2.0.0)
-  sqlite3
+  sqlite3 (~> 1.4.1)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)
