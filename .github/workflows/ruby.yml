@@ -17,11 +17,11 @@ jobs:
         version: ${{ matrix.ruby }}
 
     - name: Set up bundler
-      run: gem install sqlite3
-           gem install bundler
+      run: gem install bundler
 
     - name: bundle install
-      run: bundle install --jobs 4 --retry 3
+      run: gem install sqlite3
+           bundle install --jobs 4 --retry 3
 
     - name: Run rspec
       run: bundle exec rspec
