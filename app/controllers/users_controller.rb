@@ -1,17 +1,19 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :show]
-  before_action :require_same_user, only: [:edit, :update, :destroy]
+  before_action :set_user, only: %i[edit update show]
+  before_action :require_same_user, only: %i[edit update destroy]
   before_action :require_admin, only: [:destroy]
 
   def index
     @q = User.ransack(params[:q])
     @users = @q.result(distinct: true).page(params[:page]).per(5)
   end
-  
+
   def new
     @user = User.new
   end
-  
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -22,14 +24,12 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
-  
-  def edit
-    
-  end
+
+  def edit; end
 
   def update
     if @user.update(user_params)
-      flash[:success] = "アカウントが更新されました"
+      flash[:success] = 'アカウントが更新されました'
       redirect_to articles_path
     else
       render 'edit'
@@ -43,11 +43,12 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    flash[:danger] = "ユーザーとそのユーザーが作成したすべての記事が削除されました"
+    flash[:danger] = 'ユーザーとそのユーザーが作成したすべての記事が削除されました'
     redirect_to users_path
   end
 
   private
+
   def user_params
     params.require(:user).permit(:username, :email, :password, :profile)
   end
@@ -57,15 +58,15 @@ class UsersController < ApplicationController
   end
 
   def require_same_user
-    if current_user != @user and !current_user.admin?
-      flash[:danger] = "自分のアカウントのみ編集できます"
+    if (current_user != @user) && !current_user.admin?
+      flash[:danger] = '自分のアカウントのみ編集できます'
       redirect_to root_path
     end
   end
 
   def require_admin
-    if logged_in? and !current_user.admin?
-      flash[:danger] = "管理者のみが行える操作です"
+    if logged_in? && !current_user.admin?
+      flash[:danger] = '管理者のみが行える操作です'
       redirect_to root_path
     end
   end

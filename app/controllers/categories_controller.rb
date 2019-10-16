@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class CategoriesController < ApplicationController
-  before_action :require_admin, except: [:index, :show]
-  
+  before_action :require_admin, except: %i[index show]
+
   def index
     @categories = Category.page(params[:page]).per(5)
   end
@@ -12,7 +14,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      flash[:success] = "カテゴリが作成されました"
+      flash[:success] = 'カテゴリが作成されました'
       redirect_to categories_path
     else
       render 'new'
@@ -36,15 +38,16 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @category_articles = @category.articles.page(params[:page]).per(5)
   end
-  
+
   private
+
   def category_params
     params.require(:category).permit(:name)
   end
 
   def require_admin
-    if !logged_in? || (logged_in? and !current_user.admin?)
-      flash[:danger] = "管理者のみが行える操作です"
+    if !logged_in? || (logged_in? && !current_user.admin?)
+      flash[:danger] = '管理者のみが行える操作です'
       redirect_to categories_path
     end
   end
