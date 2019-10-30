@@ -1,0 +1,15 @@
+current directory: /Users/tsubasa/workspace/muscle-gain/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/tsubasa/.rbenv/versions/2.6.1/bin/ruby -I /Users/tsubasa/.rbenv/versions/2.6.1/lib/ruby/2.6.0 -r ./siteconf20191030-5487-1dw3pr2.rb extconf.rb
+creating Makefile
+
+current directory: /Users/tsubasa/workspace/muscle-gain/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/tsubasa/workspace/muscle-gain/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/tsubasa/workspace/muscle-gain/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20191030-5487-13ldacr/skiptrace/internal
