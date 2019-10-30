@@ -15,6 +15,3 @@ jobs:
       uses: actions/setup-ruby@master
       with:
         version: ${{ matrix.ruby }}
-      
-    - name: heroku
-      run: git push heroku master
