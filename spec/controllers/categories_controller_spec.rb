@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe CategoriesController do
@@ -5,7 +7,6 @@ describe CategoriesController do
   end
 
   describe 'GET #new' do
-  
   end
 
   describe 'GET #show' do
