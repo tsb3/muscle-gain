@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # additional gem by me
 gem 'bcrypt', '~> 3.1.7'
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'ransack'
 
